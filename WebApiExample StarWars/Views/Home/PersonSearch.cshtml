@@ -1,0 +1,15 @@
+﻿@model Person
+@if (Model != null)
+{
+
+<h2>@Model.name</h2>
+}
+
+
+<form action="/Home/PersonSearch" method="post">
+    <input type="number" name="Id" />
+    <input type="submit" />
+</form>
+
+<br /><br />
+<p><a href="/home/planetsearch">Planet Search</a></p>

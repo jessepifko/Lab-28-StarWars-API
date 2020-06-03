@@ -1,0 +1,16 @@
+﻿@model Planet
+@if (Model != null)
+{
+
+    <h2>@Model.name</h2>
+}
+
+
+<form action="/Home/PlanetSearch" method="post">
+    <input type="number" name="Id" />
+    <input type="submit" />
+</form>
+
+<br />
+<br />
+<p><a href="/home/personsearch">Person Search</a></p>

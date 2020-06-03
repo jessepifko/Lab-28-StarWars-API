@@ -1,0 +1,34 @@
+﻿@model PersonPlanet
+
+    <h2>Search Person By Index</h2>
+    <form action="/Home/PersonSearch" method="post">
+        <input type="number" name="Id" />
+        <input type="submit" value="Submit" />
+    </form>
+    <br />
+
+    @if(Model != null && Model.Person != null)
+    {
+        <p>@Model.Person.name</p>
+    }
+<br />
+
+@if (Model != null && Model.People != null)
+{
+    <p>@Html.DropDownList("person", 
+      new SelectList(Model.People.Select(x => x.name)))</p>
+}
+
+<br />
+<h2>Search Planet By Index</h2>
+<form action="/Home/PlanetSearch" method="post">
+    <input type="number" name="Id" />
+    <input type="submit" value="Submit"/>
+</form>
+<br />
+
+@if (Model != null && Model.Planet != null)
+{
+    <p>@Model.Planet.name</p>
+}
+
